@@ -9,7 +9,10 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.UuidGenerator;
 
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.UUID;
 
 @Entity(name = "books")
@@ -22,15 +25,16 @@ import java.util.UUID;
 public class Book {
 
     @Id
+    @GeneratedValue
+    @UuidGenerator
     @Column(name = "book_id")
     private UUID id;
 
     @Column(name = "title")
     private String title;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "author_id")
-    @JsonIgnore
     private Author author;
 
     @Column(name = "series")
@@ -43,9 +47,9 @@ public class Book {
     private Integer pages;
 
     @Column(name = "publish_date")
-    private String publishDate;  // change to Date instead of String ?
+    private LocalDate publishDate;
 
     @Column(name = "isbn")
-    private Integer isbn;
+    private String isbn;
 
 }

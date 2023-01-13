@@ -8,6 +8,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.UuidGenerator;
 
 import java.util.List;
 import java.util.UUID;
@@ -22,6 +23,8 @@ import java.util.UUID;
 public class Author {
 
     @Id
+    @GeneratedValue
+    @UuidGenerator
     @Column(name = "author_id")
     private UUID id;
 
@@ -31,7 +34,8 @@ public class Author {
     @Column(name = "last_name")
     private String lastName;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "author")
-    private List<Book> book;
+    @ManyToOne
+    @JoinColumn(name = "book_id")
+    private Book books;
 
 }
