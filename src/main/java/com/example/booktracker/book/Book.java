@@ -1,10 +1,10 @@
 package com.example.booktracker.book;
 
+import com.example.booktracker.author.Author;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -28,7 +28,10 @@ public class Book {
     @Column(name = "title")
     private String title;
 
-    // connect author
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "author_id")
+    @JsonIgnore
+    private Author author;
 
     @Column(name = "series")
     private String series;

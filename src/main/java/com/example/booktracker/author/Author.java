@@ -1,15 +1,15 @@
 package com.example.booktracker.author;
 
+import com.example.booktracker.book.Book;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
 import java.util.UUID;
 
 @Entity(name = "authors")
@@ -23,13 +23,15 @@ public class Author {
 
     @Id
     @Column(name = "author_id")
-    private UUID author_id;
+    private UUID id;
 
     @Column(name = "first_name")
     private String firstName;
 
-    @Column(name = "first_name")
+    @Column(name = "last_name")
     private String lastName;
 
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "author")
+    private List<Book> book;
 
 }
