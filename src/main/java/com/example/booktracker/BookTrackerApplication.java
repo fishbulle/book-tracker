@@ -25,7 +25,7 @@ public class BookTrackerApplication {
         SpringApplication.run(BookTrackerApplication.class, args);
     }
 
-    @Bean
+  /*  @Bean
     CommandLineRunner commandLineRunner(BookRepository bookRepository,
                                        AuthorRepository authorRepository) {
 
@@ -85,6 +85,6 @@ public class BookTrackerApplication {
             authorRepository.save(SJM);
             authorRepository.save(BAJS);
         };
-    }
+    }*/
 
 }
