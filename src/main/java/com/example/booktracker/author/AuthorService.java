@@ -3,8 +3,6 @@ package com.example.booktracker.author;
 import lombok.Value;
 import org.springframework.stereotype.Service;
 
-import javax.swing.text.html.Option;
-import java.net.http.HttpHeaders;
 import java.util.Optional;
 
 @Value
