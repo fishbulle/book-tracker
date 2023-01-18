@@ -2,6 +2,7 @@ package com.example.booktracker.book;
 
 import com.example.booktracker.author.Author;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
@@ -10,9 +11,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.UuidGenerator;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.UUID;
 
 @Entity(name = "books")
@@ -46,6 +47,8 @@ public class Book {
     @Column(name = "pages")
     private Integer pages;
 
+    @Temporal(TemporalType.DATE)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @Column(name = "publish_date")
     private LocalDate publishDate;
 
