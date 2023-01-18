@@ -1,5 +1,8 @@
-package com.example.booktracker.author;
+package com.example.booktracker.service;
 
+import com.example.booktracker.repository.AuthorRepository;
+import com.example.booktracker.dto.NewAuthorRequest;
+import com.example.booktracker.entity.Author;
 import lombok.Value;
 import org.springframework.stereotype.Service;
 

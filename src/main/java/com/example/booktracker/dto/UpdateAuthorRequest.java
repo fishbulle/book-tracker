@@ -1,4 +1,4 @@
-package com.example.booktracker.author;
+package com.example.booktracker.dto;
 
 public class UpdateAuthorRequest {
 

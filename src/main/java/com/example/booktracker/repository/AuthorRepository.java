@@ -1,5 +1,6 @@
-package com.example.booktracker.author;
+package com.example.booktracker.repository;
 
+import com.example.booktracker.entity.Author;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

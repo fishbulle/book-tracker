@@ -1,6 +1,6 @@
-package com.example.booktracker.book;
+package com.example.booktracker.dto;
 
-import com.example.booktracker.author.Author;
+import com.example.booktracker.entity.Author;
 
 import java.time.LocalDate;
 import java.util.UUID;

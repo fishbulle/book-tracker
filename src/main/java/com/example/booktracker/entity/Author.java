@@ -1,7 +1,5 @@
-package com.example.booktracker.author;
+package com.example.booktracker.entity;
 
-import com.example.booktracker.book.Book;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

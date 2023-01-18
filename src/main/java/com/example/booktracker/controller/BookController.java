@@ -1,5 +1,8 @@
-package com.example.booktracker.book;
+package com.example.booktracker.controller;
 
+import com.example.booktracker.service.BookService;
+import com.example.booktracker.dto.NewBookRequest;
+import com.example.booktracker.entity.Book;
 import lombok.Value;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

@@ -1,6 +1,6 @@
-package com.example.booktracker.book;
+package com.example.booktracker.entity;
 
-import com.example.booktracker.author.Author;
+import com.example.booktracker.entity.Author;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

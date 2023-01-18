@@ -1,22 +1,7 @@
 package com.example.booktracker;
 
-import com.example.booktracker.author.Author;
-import com.example.booktracker.author.AuthorRepository;
-import com.example.booktracker.book.Book;
-import com.example.booktracker.book.BookRepository;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-
-import java.time.LocalDate;
-import java.time.Month;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-import java.util.UUID;
-
-import static java.util.Calendar.JANUARY;
 
 @SpringBootApplication
 public class BookTrackerApplication {
